@@ -1,0 +1,427 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorkSpeak Circle — This Week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================= -->
+<!--  FILL THIS BLOCK EACH WEEK. Do not edit anything below it.    -->
+<!-- ============================================================= -->
+<script id="wsc-data">
+const META = {
+  weekOf: "5 – 9 October 2026",
+  topic:  "How to Speak So That People Want to Listen"
+};
+
+const ITEMS = [
+  {
+    cat: "STRUCTURE",
+    word: "I feel bored sometimes (not “I felt bored sometimes”)",
+    def: "When something is a habit or a routine, use the present simple, even if you are thinking of a past example. Words like sometimes, usually, often and never are the clue. The past simple (felt) is for one finished moment: “I felt bored in yesterday's meeting.”",
+    example: "In long meetings I sometimes feel bored, so I always prepare one question."
+  },
+  {
+    cat: "STRUCTURE",
+    word: "I didn't go (never “I didn't went”)",
+    def: "In negatives and questions, did already carries the past, so the main verb goes back to its base form: didn't go, didn't see, didn't watch. Did you go? Not “did you went?”.",
+    example: "I didn't watch the talk, but I read the summary before the session."
+  },
+  {
+    cat: "STRUCTURE",
+    word: "get + adjective: get upset · get bored · get annoyed",
+    def: "Get + adjective is how English says “ficar”: ficar chateado = get upset, ficar aborrecido = get bored. Become also exists, but it sounds formal in conversation. For a person or thing that causes the feeling: “It annoys me.”",
+    example: "I get upset when people talk over me, and it really annoys me when no one notices."
+  },
+  {
+    cat: "EXPRESSION",
+    word: "after all (at the end of the sentence)",
+    def: "Afinal. When it means “in the end, contrary to what I expected”, it goes at the end of the sentence, not at the start.",
+    example: "I wasn't sure about the new process, but it works well after all."
+  },
+  {
+    cat: "EXPRESSION",
+    word: "to ask a question (not make or do a question)",
+    def: "In Portuguese you “fazer uma pergunta”, but in English you always ask a question. You can also raise a question in a meeting, which is a little more formal.",
+    example: "Can I ask a quick question before we move on?"
+  },
+  {
+    cat: "EXPRESSION",
+    word: "to catch (or grab) people's attention · a hook",
+    def: "Captar a atenção. Catch and grab are both natural with attention. In marketing and presentations, the hook is the opening that pulls people in: a question, a number, a short story.",
+    example: "Start with a surprising number: it's a good hook to grab people's attention."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "communicator · communication",
+    def: "A communicator is the person; communication is what they do. So “she's a good communicator”, and “she has good communication skills”, never “she's a good communication”.",
+    example: "Our new manager is a great communicator: her communication is clear and calm."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "rare (adjective) · rarely (how often)",
+    def: "Rare describes a noun: a rare skill, a rare opportunity (raro). Rarely is an adverb of frequency, like never or sometimes: “I rarely go to meetings in person” (raramente).",
+    example: "Real active listening is a rare skill; most of us rarely do it well."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "to bore · bored · boring",
+    def: "To bore is the verb (aborrecer, maçar). Bored is how you feel; boring is what causes it. “The talk was boring, so I was bored.” Great speakers don't bore us.",
+    example: "Keep the update short: long slides bore the team."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "to master a language · a good command of (not “domain”)",
+    def: "Dominar uma língua = to master a language, or to have a good command of it. “Domain” is a false friend here: in English it means an area of knowledge or a website address.",
+    example: "You don't need to master English to be persuasive; a good command of your topic matters more."
+  }
+];
+
+const QUESTIONS = [
+  {
+    tag:"STRUCTURE", kind:"mc",
+    q:"Long meetings with no agenda? I ___ bored sometimes.",
+    options:["felt","feel","am feeling"],
+    answer:1,
+    feedback:"Feel. Sometimes tells us it's a routine, and routines take the present simple. Save felt for one specific meeting in the past."
+  },
+  {
+    tag:"VOCABULARY", kind:"mc",
+    q:"People always want to listen to her. She's a great ___.",
+    options:["communication","communicator","communicative"],
+    answer:1,
+    feedback:"Communicator, the person. Communication is the activity: “her communication is excellent”."
+  },
+  {
+    tag:"VOCABULARY", kind:"mc",
+    q:"Which sentence is correct?",
+    options:["Active listening is a rarely skill.","Active listening is a rare skill.","Active listening is a rarity skill."],
+    answer:1,
+    feedback:"Rare, the adjective, describes the skill. Rarely tells us how often: “I rarely interrupt”."
+  },
+  {
+    tag:"EXPRESSION", kind:"mc",
+    q:"At the end of a presentation, you put up your hand and say: “Can I ___ a question?”",
+    options:["make","do","ask"],
+    answer:2,
+    feedback:"Ask. In English you always ask a question, even though in Portuguese you “fazer” one."
+  },
+  {
+    tag:"VOCABULARY", kind:"mc",
+    q:"“Ela domina o inglês.” Which is the most natural?",
+    options:["She has a good domain of English.","She has a good command of English.","She has a good dominion of English."],
+    answer:1,
+    feedback:"A good command of English, or “she has mastered English”. Domain is a false friend: an area of knowledge or a web address."
+  },
+  {
+    tag:"STRUCTURE", kind:"gap",
+    q:"Complete: I didn't ___ to the team lunch yesterday. (ir)",
+    accept:["go"],
+    feedback:"Go, the base form. Didn't already carries the past, so the main verb doesn't change: didn't go, didn't see, didn't watch."
+  },
+  {
+    tag:"EXPRESSION", kind:"gap",
+    q:"Complete: I thought the idea wouldn't work, but you were right, after ___. (afinal)",
+    accept:["all"],
+    feedback:"After all, at the end of the sentence. It means “in the end, contrary to what I expected”."
+  },
+  {
+    tag:"STRUCTURE", kind:"gap",
+    q:"Complete: When people interrupt me, I ___ upset. (fico)",
+    accept:["get"],
+    feedback:"Get. Get + adjective is the natural way to say “ficar”: get upset, get bored, get tired."
+  }
+];
+</script>
+<!-- ============================================================= -->
+
+<style>
+  :root{
+    --red:#B91E29; --blush:#F2D7D7; --charcoal:#545454;
+    --grey:#D9D9D9; --offwhite:#F8F8F8;
+    --green:#2e7d52; --green-bg:#edf7f1; --wrong:#B91E29; --wrong-bg:#fdf0ef;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#eae6e6;
+    color:var(--charcoal);line-height:1.55}
+
+  .wrap{max-width:640px;margin:0 auto;min-height:100vh;background:#fff;
+    box-shadow:0 0 40px rgba(0,0,0,.08);display:flex;flex-direction:column}
+
+  /* ---------- Header ---------- */
+  header{background:var(--red);color:#fff;padding:26px 24px 22px}
+  header .kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.85;font-weight:600}
+  header h1{font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;
+    margin-top:6px;line-height:1.15}
+  header p{font-size:13px;opacity:.9;margin-top:7px}
+  .rule{height:6px;background:var(--blush)}
+
+  /* ---------- Tabs ---------- */
+  .tabs{display:flex;border-bottom:1px solid var(--grey);background:#fff;
+    position:sticky;top:0;z-index:5}
+  .tabs button{flex:1;font-family:inherit;font-size:14px;font-weight:600;letter-spacing:.02em;
+    color:#9a9a9a;background:none;border:none;border-bottom:3px solid transparent;
+    padding:15px 8px;cursor:pointer;transition:.15s}
+  .tabs button:hover{color:var(--charcoal)}
+  .tabs button[aria-selected="true"]{color:var(--red);border-bottom-color:var(--red)}
+
+  .panel{padding:24px;flex:1}
+  .panel[hidden]{display:none}
+
+  /* ---------- Vocabulary panel ---------- */
+  .intro{font-size:14px;margin-bottom:20px;color:#4a4a4a}
+  .section-head{background:var(--charcoal);color:#fff;font-weight:600;font-size:13px;
+    letter-spacing:.03em;padding:9px 13px;border-radius:3px;margin-bottom:12px}
+  .item{position:relative;background:var(--offwhite);border-radius:4px;
+    padding:13px 15px 13px 19px;margin-bottom:10px;overflow:hidden}
+  .item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--red)}
+  .item .top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .pill{display:inline-block;background:var(--blush);color:#7a1420;font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .word{color:var(--red);font-weight:700;font-size:16px}
+  .def{font-size:13.5px;margin-top:6px;color:#3f3f3f}
+  .example{font-size:13px;font-style:italic;color:#7c7c7c;margin-top:4px}
+  .to-quiz{display:block;width:100%;margin-top:22px;font-family:inherit;font-size:15px;
+    font-weight:600;cursor:pointer;border:none;border-radius:8px;background:var(--red);
+    color:#fff;padding:14px 22px;transition:.15s}
+  .to-quiz:hover{filter:brightness(1.07)}
+  .notes-lines{display:none}
+
+  /* ---------- Quiz panel ---------- */
+  .progress{height:7px;background:#EADFDF;border-radius:4px;overflow:hidden;margin-bottom:20px}
+  .progress .fill{height:100%;width:0;background:var(--red);transition:width .3s ease}
+  .qcount{font-size:12px;color:#9a9a9a;font-weight:500;margin-bottom:12px}
+  .tag{display:inline-block;background:var(--blush);color:#7a1420;font-size:10px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;padding:4px 10px;border-radius:20px}
+  .q{font-size:18px;font-weight:600;color:#3a3a3a;margin:14px 0 18px;line-height:1.4}
+  .opts{display:flex;flex-direction:column;gap:10px}
+  .opt{text-align:left;font-size:15px;font-family:inherit;color:#444;background:var(--offwhite);
+    border:1.5px solid var(--grey);border-radius:8px;padding:13px 15px;cursor:pointer;transition:.15s}
+  .opt:hover:not(:disabled){border-color:var(--red);background:#fff}
+  .opt:disabled{cursor:default}
+  .opt.correct{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600}
+  .opt.wrong{border-color:var(--wrong);background:var(--wrong-bg);color:var(--wrong);font-weight:600}
+  .gap-row{display:flex;gap:10px}
+  .gap-row input{flex:1;min-width:0;font-size:16px;font-family:inherit;padding:13px 15px;
+    border:1.5px solid var(--grey);border-radius:8px;color:#444}
+  .gap-row input:focus{outline:none;border-color:var(--red)}
+  .gap-row button,.next,.retry{font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;
+    border:none;border-radius:8px;background:var(--red);color:#fff;padding:13px 22px;transition:.15s}
+  .gap-row button:hover,.next:hover,.retry:hover{filter:brightness(1.07)}
+  .feedback{margin-top:18px;padding:14px 16px;border-radius:8px;font-size:14px;display:none}
+  .feedback.show{display:block}
+  .feedback.ok{background:var(--green-bg);border-left:4px solid var(--green)}
+  .feedback.no{background:var(--wrong-bg);border-left:4px solid var(--wrong)}
+  .feedback .head{font-weight:700;margin-bottom:4px}
+  .feedback.ok .head{color:var(--green)}
+  .feedback.no .head{color:var(--wrong)}
+  .next{margin-top:18px;display:none}
+  .next.show{display:inline-block}
+  .results{text-align:center;padding:10px 0}
+  .results .score{font-family:'Playfair Display',serif;font-size:52px;color:var(--red);font-weight:700}
+  .results .msg{font-size:16px;margin:6px 0 22px;color:#4a4a4a}
+  .breakdown{text-align:left;margin:0 0 22px}
+  .breakdown .row{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:9px 0;
+    border-bottom:1px solid #eee}
+  .breakdown .mark{font-weight:700;flex:0 0 auto}
+  .breakdown .mark.ok{color:var(--green)} .breakdown .mark.no{color:var(--wrong)}
+
+  footer{border-top:1px solid var(--grey);text-align:center;font-size:11px;color:#a2a2a2;padding:16px 24px}
+
+  /* ---------- Print: the vocabulary panel only, as an A4 sheet ---------- */
+  @media print{
+    body{background:#fff}
+    .wrap{max-width:none;box-shadow:none;min-height:auto}
+    .tabs,.to-quiz,#panel-quiz{display:none !important}
+    #panel-vocab{display:block !important}
+    .notes-lines{display:block;margin-top:8px}
+    .notes-lines .line{border-bottom:1px solid var(--grey);height:26px}
+    @page{size:A4;margin:14mm}
+    /* Force the red header and blush rule to print even when the browser's
+       "Background graphics" option is unticked. Without this the header prints
+       white and the white brand text disappears. */
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">WorkSpeak Circle&trade;</div>
+      <h1 id="h-topic"></h1>
+      <p id="h-week"></p>
+    </header>
+    <div class="rule"></div>
+
+    <div class="tabs" role="tablist">
+      <button id="tab-vocab" role="tab" aria-controls="panel-vocab" aria-selected="true">Vocabulary</button>
+      <button id="tab-quiz"  role="tab" aria-controls="panel-quiz"  aria-selected="false">Quiz</button>
+    </div>
+
+    <section class="panel" id="panel-vocab" role="tabpanel" aria-labelledby="tab-vocab">
+      <p class="intro" id="intro"></p>
+      <div class="section-head">This week's language points</div>
+      <div id="items"></div>
+      <div class="section-head notes-lines" style="margin-top:16px">My notes</div>
+      <div class="notes-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div>
+      </div>
+      <button class="to-quiz" id="to-quiz">Now try the quiz →</button>
+    </section>
+
+    <section class="panel" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
+      <div class="progress"><div class="fill" id="fill"></div></div>
+      <div id="quiz-main"></div>
+    </section>
+
+    <footer>© <span id="year"></span> Elsa de Sousa Pinto · elsadesousapinto.com · WorkSpeak Circle. All rights reserved.</footer>
+  </div>
+
+<script>
+  var esc = function(s){var d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML;};
+  var norm = function(s){return (s||'').trim().toLowerCase().replace(/\s+/g,' ');};
+
+  /* ---------- Shared chrome ---------- */
+  document.getElementById('h-topic').textContent = META.topic;
+  document.getElementById('h-week').textContent = "Week of " + META.weekOf;
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.title = "WorkSpeak Circle — " + META.topic;
+
+  /* ---------- Vocabulary ---------- */
+  document.getElementById('intro').textContent =
+    "This sheet compiles the key language points from this week's WorkSpeak Circle sessions on "
+    + META.topic + ". Review these items before next week's session and try using them in your "
+    + "professional context.";
+  document.getElementById('items').innerHTML = ITEMS.map(function(it){
+    return '<div class="item"><div class="top">'
+      + '<span class="pill">' + esc(it.cat) + '</span>'
+      + '<span class="word">' + esc(it.word) + '</span></div>'
+      + '<div class="def">' + esc(it.def) + '</div>'
+      + '<div class="example">e.g. “' + esc(it.example) + '”</div></div>';
+  }).join('');
+
+  /* ---------- Tabs ---------- */
+  var tabs = {
+    vocab: {btn:document.getElementById('tab-vocab'), panel:document.getElementById('panel-vocab')},
+    quiz:  {btn:document.getElementById('tab-quiz'),  panel:document.getElementById('panel-quiz')}
+  };
+  function show(which){
+    Object.keys(tabs).forEach(function(k){
+      var t = tabs[k], on = (k === which);
+      t.btn.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.panel.hidden = !on;
+    });
+    if(location.hash.slice(1) !== which){
+      history.replaceState(null, '', '#' + which);
+    }
+    window.scrollTo(0, 0);
+  }
+  tabs.vocab.btn.addEventListener('click', function(){ show('vocab'); });
+  tabs.quiz.btn.addEventListener('click',  function(){ show('quiz'); });
+  document.getElementById('to-quiz').addEventListener('click', function(){ show('quiz'); });
+
+  /* ---------- Quiz ---------- */
+  var i = 0, score = 0, results = [];
+  var quizMain = document.getElementById('quiz-main'), fill = document.getElementById('fill');
+
+  function setProgress(){ fill.style.width = (i/QUESTIONS.length*100) + '%'; }
+
+  function render(){
+    setProgress();
+    if(i >= QUESTIONS.length){ return renderResults(); }
+    var qq = QUESTIONS[i];
+    var body = '<div class="qcount">Question ' + (i+1) + ' of ' + QUESTIONS.length + '</div>'
+      + '<span class="tag">' + esc(qq.tag) + '</span>'
+      + '<div class="q">' + esc(qq.q) + '</div>';
+    if(qq.kind === 'mc'){
+      body += '<div class="opts" id="opts">' + qq.options.map(function(o,idx){
+        return '<button class="opt" data-idx="'+idx+'">' + esc(o) + '</button>';
+      }).join('') + '</div>';
+    } else {
+      body += '<div class="gap-row"><input id="gap" type="text" autocomplete="off" '
+        + 'placeholder="Type your answer…"><button id="gapBtn">Check</button></div>';
+    }
+    body += '<div class="feedback" id="fb"></div>'
+      + '<button class="next" id="next">Next question →</button>';
+    quizMain.innerHTML = body;
+
+    if(qq.kind === 'mc'){
+      Array.prototype.forEach.call(quizMain.querySelectorAll('.opt'), function(b){
+        b.addEventListener('click', function(){ answerMC(parseInt(b.dataset.idx,10)); });
+      });
+    } else {
+      var input = document.getElementById('gap');
+      var go = function(){ answerGap(input.value); };
+      document.getElementById('gapBtn').addEventListener('click', go);
+      input.addEventListener('keydown', function(e){ if(e.key === 'Enter') go(); });
+    }
+  }
+
+  function correctText(qq){
+    return qq.kind === 'mc' ? qq.options[qq.answer] : qq.accept[0];
+  }
+
+  function lockAndFeedback(correct, qq){
+    var fb = document.getElementById('fb');
+    fb.className = 'feedback show ' + (correct ? 'ok' : 'no');
+    fb.innerHTML = '<div class="head">' + (correct ? '✓ Correct' : '✗ Not quite') + '</div>'
+      + (correct ? '' : '<div>Answer: <strong>' + esc(correctText(qq)) + '</strong></div>')
+      + '<div>' + esc(qq.feedback) + '</div>';
+    document.getElementById('next').classList.add('show');
+    results.push({q:qq.q, correct:correct});
+    if(correct) score++;
+  }
+
+  function answerMC(idx){
+    var qq = QUESTIONS[i];
+    var correct = idx === qq.answer;
+    Array.prototype.forEach.call(quizMain.querySelectorAll('.opt'), function(b,bi){
+      b.disabled = true;
+      if(bi === qq.answer) b.classList.add('correct');
+      if(bi === idx && !correct) b.classList.add('wrong');
+    });
+    lockAndFeedback(correct, qq);
+  }
+
+  function answerGap(val){
+    var qq = QUESTIONS[i];
+    var correct = qq.accept.some(function(a){ return norm(a) === norm(val); });
+    document.getElementById('gap').disabled = true;
+    document.getElementById('gapBtn').disabled = true;
+    lockAndFeedback(correct, qq);
+  }
+
+  function renderResults(){
+    fill.style.width = '100%';
+    var pct = Math.round(score/QUESTIONS.length*100);
+    var msg = pct >= 80 ? "Excellent — this vocabulary is becoming second nature. 🎯"
+            : pct >= 50 ? "Nice work — a quick review and you'll have these down. 💪"
+            : "Good start — revisit the vocabulary tab and try again. You've got this. 🌱";
+    var rows = results.map(function(r){
+      return '<div class="row"><span class="mark ' + (r.correct?'ok':'no') + '">'
+        + (r.correct?'✓':'✗') + '</span><span>' + esc(r.q) + '</span></div>';
+    }).join('');
+    quizMain.innerHTML = '<div class="results">'
+      + '<div class="score">' + score + '/' + QUESTIONS.length + '</div>'
+      + '<div class="msg">' + msg + '</div>'
+      + '<div class="breakdown">' + rows + '</div>'
+      + '<button class="retry" id="retry">Try again</button></div>';
+    document.getElementById('retry').addEventListener('click', function(){
+      i=0; score=0; results=[]; render();
+    });
+  }
+
+  quizMain.addEventListener('click', function(e){
+    if(e.target && e.target.id === 'next'){ i++; render(); }
+  });
+
+  render();
+  show(location.hash.slice(1) === 'quiz' ? 'quiz' : 'vocab');
+</script>
+</body>
+</html>

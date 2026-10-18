@@ -1,0 +1,427 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorkSpeak Circle — This Week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================= -->
+<!--  FILL THIS BLOCK EACH WEEK. Do not edit anything below it.    -->
+<!-- ============================================================= -->
+<script id="wsc-data">
+const META = {
+  weekOf: "28 September – 2 October 2026",
+  topic:  "Open conversation: work, technology and growth"
+};
+
+const ITEMS = [
+  {
+    cat: "STRUCTURE",
+    word: "I understand (not “I'm understanding”)",
+    def: "State verbs describe a state, not an action, so they don't normally take the continuous (-ing) form, even when the state is true right now. The usual ones: understand, know, want, like, love, hate, need, believe. Action verbs (drive, listen, speak) are fine in the continuous. McDonald's “I'm loving it” breaks the rule on purpose, for marketing.",
+    example: "I understand the brief, and I know what the client wants."
+  },
+  {
+    cat: "STRUCTURE",
+    word: "If we hadn't …, we wouldn't have …",
+    def: "The third conditional: an imagined past, different from what really happened, and its imagined result. If + past perfect (had / hadn't + participle), then would / wouldn't have + participle. It works exactly like the Portuguese “Se não tivéssemos…, não teríamos…”.",
+    example: "If we hadn't tested the system first, we would have lost the client's data."
+  },
+  {
+    cat: "STRUCTURE",
+    word: "cheaper · more expensive (never “more cheaper”)",
+    def: "Short adjectives take -er: cheap → cheaper, big → bigger, fast → faster. Longer adjectives take more: expensive → more expensive. Never both together. Portuguese says “mais” every time, which is why “more cheap” and “more cheaper” slip out.",
+    example: "The new supplier is cheaper, but the old one was faster and more reliable."
+  },
+  {
+    cat: "EXPRESSION",
+    word: "to leave your comfort zone",
+    def: "To put yourself in a situation that feels uncomfortable or unfamiliar, usually to learn or grow / sair da zona de conforto. Also: to step out of / to push yourself out of your comfort zone.",
+    example: "Presenting to the board took me out of my comfort zone, and I learnt a lot."
+  },
+  {
+    cat: "EXPRESSION",
+    word: "to raise awareness · to create awareness",
+    def: "To make people conscious of something important / sensibilizar. Raise is the most natural verb with awareness; create also works. You raise awareness of or about something.",
+    example: "We ran a short workshop to raise awareness of our brand guidelines."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "complain (verb) · complaint (noun)",
+    def: "Complain is the action: to say you are unhappy about something / queixar-se. A complaint is the thing itself: uma queixa, uma reclamação. So “I don't have complaints”, not “I don't have complain”.",
+    example: "The client complained about the delay, and we answered the complaint the same day."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "enrol · sign up · submit",
+    def: "Enrol and sign up are the same: to register for a course, an event or a programme / inscrever-se. Enrolments and sign-ups are the inscrições. Submit is different: it's the final click that sends a form you have filled in / submeter, enviar.",
+    example: "We had 80 sign-ups for the training day, and 45 people submitted the survey afterwards."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "multi-skilled (not “polyvalent”)",
+    def: "Polivalente = multi-skilled or versatile: someone who can do several different jobs well. “Polyvalent” exists in English, but only in chemistry and medicine.",
+    example: "We need someone multi-skilled who can write content, design and manage the channels."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "in-house · external service",
+    def: "In-house means done inside the company by your own team / interno. When you pay another company to do it, it's an external service or provider, or you outsource it.",
+    example: "Our IT support is in-house, but payroll goes to an external provider."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "factory · fabric · to manufacture",
+    def: "False friend: fábrica = factory. Fabric is tecido, the material clothes are made of. The verb is to manufacture (fabricar, produzir em fábrica), and the people who do it are manufacturers.",
+    example: "Our factory manufactures parts for three car brands."
+  }
+];
+
+const QUESTIONS = [
+  {
+    tag:"STRUCTURE", kind:"mc",
+    q:"Your manager asks: “Is that clear?” Which answer is correct?",
+    options:["Yes, I'm understanding.","Yes, I understand.","Yes, I am understand."],
+    answer:1,
+    feedback:"Understand is a state verb, so it stays in the simple form even though it's true right now. The same goes for know, want and like: “I know”, never “I'm knowing”."
+  },
+  {
+    tag:"STRUCTURE", kind:"mc",
+    q:"Which sentence is correct?",
+    options:["The train is more cheaper than the plane.","The train is more cheap than the plane.","The train is cheaper than the plane."],
+    answer:2,
+    feedback:"Short adjectives take -er and nothing else: cheaper. Long ones take more: more expensive. Never both in the same word."
+  },
+  {
+    tag:"VOCABULARY", kind:"mc",
+    q:"“A empresa tem uma fábrica em Aveiro.” Which is correct?",
+    options:["The company has a fabric in Aveiro.","The company has a factory in Aveiro.","The company has a manufacture in Aveiro."],
+    answer:1,
+    feedback:"Factory. Fabric is the material clothes are made of, so a “fabric in Aveiro” sounds like a very large piece of cloth."
+  },
+  {
+    tag:"VOCABULARY", kind:"mc",
+    q:"A visitor fills in your online survey and clicks the final button. What did they do?",
+    options:["They enrolled the survey.","They signed up the survey.","They submitted the survey."],
+    answer:2,
+    feedback:"Submitted. Enrol and sign up are for registering on a course, an event or a programme; submit is the click that sends a completed form."
+  },
+  {
+    tag:"VOCABULARY", kind:"mc",
+    q:"“Ela é muito polivalente.” Which is the most natural?",
+    options:["She's very polyvalent.","She's very multi-skilled.","She's very multi-skill."],
+    answer:1,
+    feedback:"Multi-skilled, with -ed. Versatile also works. “Polyvalent” belongs to chemistry and medicine, not to job descriptions."
+  },
+  {
+    tag:"STRUCTURE", kind:"gap",
+    q:"Complete: If we ___ tested the system first, we would have lost the client's data. (não tivéssemos)",
+    accept:["hadn't","had not"],
+    feedback:"Hadn't (had not) + participle, then would have + participle. The third conditional: an imagined past and its imagined result, exactly like the Portuguese."
+  },
+  {
+    tag:"EXPRESSION", kind:"gap",
+    q:"Complete: We ran a short workshop to ___ awareness of our brand guidelines. (sensibilizar)",
+    accept:["raise","create"],
+    feedback:"Raise awareness is the most natural combination; create awareness works too. Either way, awareness of or about something."
+  },
+  {
+    tag:"VOCABULARY", kind:"gap",
+    q:"Complete: The client sent a formal ___ about the delay. (reclamação)",
+    accept:["complaint"],
+    feedback:"Complaint is the noun, the thing you send or receive. Complain is the verb: “the client complained about the delay”."
+  }
+];
+</script>
+<!-- ============================================================= -->
+
+<style>
+  :root{
+    --red:#B91E29; --blush:#F2D7D7; --charcoal:#545454;
+    --grey:#D9D9D9; --offwhite:#F8F8F8;
+    --green:#2e7d52; --green-bg:#edf7f1; --wrong:#B91E29; --wrong-bg:#fdf0ef;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#eae6e6;
+    color:var(--charcoal);line-height:1.55}
+
+  .wrap{max-width:640px;margin:0 auto;min-height:100vh;background:#fff;
+    box-shadow:0 0 40px rgba(0,0,0,.08);display:flex;flex-direction:column}
+
+  /* ---------- Header ---------- */
+  header{background:var(--red);color:#fff;padding:26px 24px 22px}
+  header .kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.85;font-weight:600}
+  header h1{font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;
+    margin-top:6px;line-height:1.15}
+  header p{font-size:13px;opacity:.9;margin-top:7px}
+  .rule{height:6px;background:var(--blush)}
+
+  /* ---------- Tabs ---------- */
+  .tabs{display:flex;border-bottom:1px solid var(--grey);background:#fff;
+    position:sticky;top:0;z-index:5}
+  .tabs button{flex:1;font-family:inherit;font-size:14px;font-weight:600;letter-spacing:.02em;
+    color:#9a9a9a;background:none;border:none;border-bottom:3px solid transparent;
+    padding:15px 8px;cursor:pointer;transition:.15s}
+  .tabs button:hover{color:var(--charcoal)}
+  .tabs button[aria-selected="true"]{color:var(--red);border-bottom-color:var(--red)}
+
+  .panel{padding:24px;flex:1}
+  .panel[hidden]{display:none}
+
+  /* ---------- Vocabulary panel ---------- */
+  .intro{font-size:14px;margin-bottom:20px;color:#4a4a4a}
+  .section-head{background:var(--charcoal);color:#fff;font-weight:600;font-size:13px;
+    letter-spacing:.03em;padding:9px 13px;border-radius:3px;margin-bottom:12px}
+  .item{position:relative;background:var(--offwhite);border-radius:4px;
+    padding:13px 15px 13px 19px;margin-bottom:10px;overflow:hidden}
+  .item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--red)}
+  .item .top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .pill{display:inline-block;background:var(--blush);color:#7a1420;font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .word{color:var(--red);font-weight:700;font-size:16px}
+  .def{font-size:13.5px;margin-top:6px;color:#3f3f3f}
+  .example{font-size:13px;font-style:italic;color:#7c7c7c;margin-top:4px}
+  .to-quiz{display:block;width:100%;margin-top:22px;font-family:inherit;font-size:15px;
+    font-weight:600;cursor:pointer;border:none;border-radius:8px;background:var(--red);
+    color:#fff;padding:14px 22px;transition:.15s}
+  .to-quiz:hover{filter:brightness(1.07)}
+  .notes-lines{display:none}
+
+  /* ---------- Quiz panel ---------- */
+  .progress{height:7px;background:#EADFDF;border-radius:4px;overflow:hidden;margin-bottom:20px}
+  .progress .fill{height:100%;width:0;background:var(--red);transition:width .3s ease}
+  .qcount{font-size:12px;color:#9a9a9a;font-weight:500;margin-bottom:12px}
+  .tag{display:inline-block;background:var(--blush);color:#7a1420;font-size:10px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;padding:4px 10px;border-radius:20px}
+  .q{font-size:18px;font-weight:600;color:#3a3a3a;margin:14px 0 18px;line-height:1.4}
+  .opts{display:flex;flex-direction:column;gap:10px}
+  .opt{text-align:left;font-size:15px;font-family:inherit;color:#444;background:var(--offwhite);
+    border:1.5px solid var(--grey);border-radius:8px;padding:13px 15px;cursor:pointer;transition:.15s}
+  .opt:hover:not(:disabled){border-color:var(--red);background:#fff}
+  .opt:disabled{cursor:default}
+  .opt.correct{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600}
+  .opt.wrong{border-color:var(--wrong);background:var(--wrong-bg);color:var(--wrong);font-weight:600}
+  .gap-row{display:flex;gap:10px}
+  .gap-row input{flex:1;min-width:0;font-size:16px;font-family:inherit;padding:13px 15px;
+    border:1.5px solid var(--grey);border-radius:8px;color:#444}
+  .gap-row input:focus{outline:none;border-color:var(--red)}
+  .gap-row button,.next,.retry{font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;
+    border:none;border-radius:8px;background:var(--red);color:#fff;padding:13px 22px;transition:.15s}
+  .gap-row button:hover,.next:hover,.retry:hover{filter:brightness(1.07)}
+  .feedback{margin-top:18px;padding:14px 16px;border-radius:8px;font-size:14px;display:none}
+  .feedback.show{display:block}
+  .feedback.ok{background:var(--green-bg);border-left:4px solid var(--green)}
+  .feedback.no{background:var(--wrong-bg);border-left:4px solid var(--wrong)}
+  .feedback .head{font-weight:700;margin-bottom:4px}
+  .feedback.ok .head{color:var(--green)}
+  .feedback.no .head{color:var(--wrong)}
+  .next{margin-top:18px;display:none}
+  .next.show{display:inline-block}
+  .results{text-align:center;padding:10px 0}
+  .results .score{font-family:'Playfair Display',serif;font-size:52px;color:var(--red);font-weight:700}
+  .results .msg{font-size:16px;margin:6px 0 22px;color:#4a4a4a}
+  .breakdown{text-align:left;margin:0 0 22px}
+  .breakdown .row{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:9px 0;
+    border-bottom:1px solid #eee}
+  .breakdown .mark{font-weight:700;flex:0 0 auto}
+  .breakdown .mark.ok{color:var(--green)} .breakdown .mark.no{color:var(--wrong)}
+
+  footer{border-top:1px solid var(--grey);text-align:center;font-size:11px;color:#a2a2a2;padding:16px 24px}
+
+  /* ---------- Print: the vocabulary panel only, as an A4 sheet ---------- */
+  @media print{
+    body{background:#fff}
+    .wrap{max-width:none;box-shadow:none;min-height:auto}
+    .tabs,.to-quiz,#panel-quiz{display:none !important}
+    #panel-vocab{display:block !important}
+    .notes-lines{display:block;margin-top:8px}
+    .notes-lines .line{border-bottom:1px solid var(--grey);height:26px}
+    @page{size:A4;margin:14mm}
+    /* Force the red header and blush rule to print even when the browser's
+       "Background graphics" option is unticked. Without this the header prints
+       white and the white brand text disappears. */
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">WorkSpeak Circle&trade;</div>
+      <h1 id="h-topic"></h1>
+      <p id="h-week"></p>
+    </header>
+    <div class="rule"></div>
+
+    <div class="tabs" role="tablist">
+      <button id="tab-vocab" role="tab" aria-controls="panel-vocab" aria-selected="true">Vocabulary</button>
+      <button id="tab-quiz"  role="tab" aria-controls="panel-quiz"  aria-selected="false">Quiz</button>
+    </div>
+
+    <section class="panel" id="panel-vocab" role="tabpanel" aria-labelledby="tab-vocab">
+      <p class="intro" id="intro"></p>
+      <div class="section-head">This week's language points</div>
+      <div id="items"></div>
+      <div class="section-head notes-lines" style="margin-top:16px">My notes</div>
+      <div class="notes-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div>
+      </div>
+      <button class="to-quiz" id="to-quiz">Now try the quiz →</button>
+    </section>
+
+    <section class="panel" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
+      <div class="progress"><div class="fill" id="fill"></div></div>
+      <div id="quiz-main"></div>
+    </section>
+
+    <footer>© <span id="year"></span> Elsa de Sousa Pinto · elsadesousapinto.com · WorkSpeak Circle. All rights reserved.</footer>
+  </div>
+
+<script>
+  var esc = function(s){var d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML;};
+  var norm = function(s){return (s||'').trim().toLowerCase().replace(/\s+/g,' ');};
+
+  /* ---------- Shared chrome ---------- */
+  document.getElementById('h-topic').textContent = META.topic;
+  document.getElementById('h-week').textContent = "Week of " + META.weekOf;
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.title = "WorkSpeak Circle — " + META.topic;
+
+  /* ---------- Vocabulary ---------- */
+  document.getElementById('intro').textContent =
+    "This sheet compiles the key language points from this week's WorkSpeak Circle sessions on "
+    + META.topic + ". Review these items before next week's session and try using them in your "
+    + "professional context.";
+  document.getElementById('items').innerHTML = ITEMS.map(function(it){
+    return '<div class="item"><div class="top">'
+      + '<span class="pill">' + esc(it.cat) + '</span>'
+      + '<span class="word">' + esc(it.word) + '</span></div>'
+      + '<div class="def">' + esc(it.def) + '</div>'
+      + '<div class="example">e.g. “' + esc(it.example) + '”</div></div>';
+  }).join('');
+
+  /* ---------- Tabs ---------- */
+  var tabs = {
+    vocab: {btn:document.getElementById('tab-vocab'), panel:document.getElementById('panel-vocab')},
+    quiz:  {btn:document.getElementById('tab-quiz'),  panel:document.getElementById('panel-quiz')}
+  };
+  function show(which){
+    Object.keys(tabs).forEach(function(k){
+      var t = tabs[k], on = (k === which);
+      t.btn.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.panel.hidden = !on;
+    });
+    if(location.hash.slice(1) !== which){
+      history.replaceState(null, '', '#' + which);
+    }
+    window.scrollTo(0, 0);
+  }
+  tabs.vocab.btn.addEventListener('click', function(){ show('vocab'); });
+  tabs.quiz.btn.addEventListener('click',  function(){ show('quiz'); });
+  document.getElementById('to-quiz').addEventListener('click', function(){ show('quiz'); });
+
+  /* ---------- Quiz ---------- */
+  var i = 0, score = 0, results = [];
+  var quizMain = document.getElementById('quiz-main'), fill = document.getElementById('fill');
+
+  function setProgress(){ fill.style.width = (i/QUESTIONS.length*100) + '%'; }
+
+  function render(){
+    setProgress();
+    if(i >= QUESTIONS.length){ return renderResults(); }
+    var qq = QUESTIONS[i];
+    var body = '<div class="qcount">Question ' + (i+1) + ' of ' + QUESTIONS.length + '</div>'
+      + '<span class="tag">' + esc(qq.tag) + '</span>'
+      + '<div class="q">' + esc(qq.q) + '</div>';
+    if(qq.kind === 'mc'){
+      body += '<div class="opts" id="opts">' + qq.options.map(function(o,idx){
+        return '<button class="opt" data-idx="'+idx+'">' + esc(o) + '</button>';
+      }).join('') + '</div>';
+    } else {
+      body += '<div class="gap-row"><input id="gap" type="text" autocomplete="off" '
+        + 'placeholder="Type your answer…"><button id="gapBtn">Check</button></div>';
+    }
+    body += '<div class="feedback" id="fb"></div>'
+      + '<button class="next" id="next">Next question →</button>';
+    quizMain.innerHTML = body;
+
+    if(qq.kind === 'mc'){
+      Array.prototype.forEach.call(quizMain.querySelectorAll('.opt'), function(b){
+        b.addEventListener('click', function(){ answerMC(parseInt(b.dataset.idx,10)); });
+      });
+    } else {
+      var input = document.getElementById('gap');
+      var go = function(){ answerGap(input.value); };
+      document.getElementById('gapBtn').addEventListener('click', go);
+      input.addEventListener('keydown', function(e){ if(e.key === 'Enter') go(); });
+    }
+  }
+
+  function correctText(qq){
+    return qq.kind === 'mc' ? qq.options[qq.answer] : qq.accept[0];
+  }
+
+  function lockAndFeedback(correct, qq){
+    var fb = document.getElementById('fb');
+    fb.className = 'feedback show ' + (correct ? 'ok' : 'no');
+    fb.innerHTML = '<div class="head">' + (correct ? '✓ Correct' : '✗ Not quite') + '</div>'
+      + (correct ? '' : '<div>Answer: <strong>' + esc(correctText(qq)) + '</strong></div>')
+      + '<div>' + esc(qq.feedback) + '</div>';
+    document.getElementById('next').classList.add('show');
+    results.push({q:qq.q, correct:correct});
+    if(correct) score++;
+  }
+
+  function answerMC(idx){
+    var qq = QUESTIONS[i];
+    var correct = idx === qq.answer;
+    Array.prototype.forEach.call(quizMain.querySelectorAll('.opt'), function(b,bi){
+      b.disabled = true;
+      if(bi === qq.answer) b.classList.add('correct');
+      if(bi === idx && !correct) b.classList.add('wrong');
+    });
+    lockAndFeedback(correct, qq);
+  }
+
+  function answerGap(val){
+    var qq = QUESTIONS[i];
+    var correct = qq.accept.some(function(a){ return norm(a) === norm(val); });
+    document.getElementById('gap').disabled = true;
+    document.getElementById('gapBtn').disabled = true;
+    lockAndFeedback(correct, qq);
+  }
+
+  function renderResults(){
+    fill.style.width = '100%';
+    var pct = Math.round(score/QUESTIONS.length*100);
+    var msg = pct >= 80 ? "Excellent — this vocabulary is becoming second nature. 🎯"
+            : pct >= 50 ? "Nice work — a quick review and you'll have these down. 💪"
+            : "Good start — revisit the vocabulary tab and try again. You've got this. 🌱";
+    var rows = results.map(function(r){
+      return '<div class="row"><span class="mark ' + (r.correct?'ok':'no') + '">'
+        + (r.correct?'✓':'✗') + '</span><span>' + esc(r.q) + '</span></div>';
+    }).join('');
+    quizMain.innerHTML = '<div class="results">'
+      + '<div class="score">' + score + '/' + QUESTIONS.length + '</div>'
+      + '<div class="msg">' + msg + '</div>'
+      + '<div class="breakdown">' + rows + '</div>'
+      + '<button class="retry" id="retry">Try again</button></div>';
+    document.getElementById('retry').addEventListener('click', function(){
+      i=0; score=0; results=[]; render();
+    });
+  }
+
+  quizMain.addEventListener('click', function(e){
+    if(e.target && e.target.id === 'next'){ i++; render(); }
+  });
+
+  render();
+  show(location.hash.slice(1) === 'quiz' ? 'quiz' : 'vocab');
+</script>
+</body>
+</html>
