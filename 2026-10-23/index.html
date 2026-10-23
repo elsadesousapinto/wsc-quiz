@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorkSpeak Circle — This Week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================= -->
+<!--  FILL THIS BLOCK EACH WEEK. Do not edit anything below it.    -->
+<!-- ============================================================= -->
+<script id="wsc-data">
+const META = {
+  weekOf: "19 – 23 October 2026",
+  topic:  "Housing: How to Stop Homelessness Before It Starts"
+};
+
+const ITEMS = [
+  {
+    cat: "VOCABULARY",
+    word: "housing · the housing crisis (not “habitation”)",
+    def: "Habitação. Housing is the general word for homes and the conditions people live in: housing prices, social housing, the housing crisis. “Habitation” exists in English but is rare and formal.",
+    example: "The housing crisis is now a topic in almost every board meeting about hiring."
+  },
+  {
+    cat: "STRUCTURE",
+    word: "the homeless (no “people”, no -s)",
+    def: "Os sem-abrigo. The + adjective names the whole group: the homeless, the young, the unemployed. You don't need “people” after it, and it never takes a plural -s. For one person: a homeless man, a homeless woman.",
+    example: "The city opened two new centres to support the homeless this winter."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "tenant · landlord · landlady",
+    def: "Inquilino e senhorio. The tenant rents and lives in the house; the landlord (a man) or landlady (a woman) owns it and rents it out.",
+    example: "The landlord agreed to fix the heating before the new tenant moves in."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "a deposit · a down payment",
+    def: "Caução ou entrada: money you pay in advance. To rent a flat you usually pay a deposit; to buy a house or a car you make a down payment.",
+    example: "They asked for two months' rent as a deposit before signing the contract."
+  },
+  {
+    cat: "EXPRESSION",
+    word: "to take out a loan · interest · the interest rate",
+    def: "Pedir um empréstimo: we take out a loan (not “ask a loan”). Interest is the money you pay for borrowing (juros); the interest rate is the percentage (a taxa de juro).",
+    example: "We took out a loan for the new equipment, and luckily the interest rate was fixed."
+  },
+  {
+    cat: "VOCABULARY",
+    word: "can afford (not “can support”)",
+    def: "Ter dinheiro para. If you can afford something, you have enough money to pay for it. “Support” is giving help, as in financial or emotional support.",
+    example: "Many young professionals can't afford to rent a flat on their own."
+  },
+  {
+    cat: "EXPRESSION",
+    word: "supply and demand",
+    def: "Oferta e procura. In economics, the oferta is the supply (an offer is a proposta). When demand is higher than supply, prices go up.",
+    example: "It's simple supply and demand: there aren't enough flats, so rents keep rising."
+  },
+  {
+    cat: "STRUCTURE",
+    word: "news · pocket money (uncountable: no “a”, no -s)",
+    def: "News looks plural but takes a singular verb and never takes “a”: on the news, some news, a piece of news, the news is good. Money and pocket money are uncountable too: “I give my son pocket money”, not “a pocket money”.",
+    example: "I saw it on the news last night. Is there any news about the project?"
+  },
+  {
+    cat: "STRUCTURE",
+    word: "didn't + base verb (I didn't see · How did it go?)",
+    def: "In questions and negatives with did, the past is already in did, so the main verb goes back to its base form. Not “didn't saw” or “How did it went?”.",
+    example: "I didn't understand the last part. How did the presentation go?"
+  },
+  {
+    cat: "EXPRESSION",
+    word: "to take a risk · to take advantage of",
+    def: "Arriscar e aproveitar. Both use take: we take a risk (not “do a risk”) and we take advantage of an opportunity.",
+    example: "Investing in a second property is a big risk, and not everyone is ready to take it."
+  }
+];
+
+// 8 questions: 5 kind:"mc" (multiple choice) + 3 kind:"gap" (gap fill).
+const QUESTIONS = [
+  {
+    tag:"VOCABULARY", kind:"mc",
+    q:"The person who rents a flat and lives in it is the ___.",
+    options:["landlord","tenant","owner"],
+    answer:1,
+    feedback:"Tenant. The landlord (or landlady) owns the property and rents it out; the tenant pays the rent and lives there."
+  },
+  {
+    tag:"STRUCTURE", kind:"mc",
+    q:"Which sentence is correct?",
+    options:["The city needs more shelters for the homeless.","The city needs more shelters for the homelesses.","The city needs more shelters for the homeless peoples."],
+    answer:0,
+    feedback:"For the homeless. The + adjective already means the whole group, so no -s and no “people” is needed."
+  },
+  {
+    tag:"EXPRESSION", kind:"mc",
+    q:"To buy the new office, the company had to ___ a loan.",
+    options:["ask","take out","do"],
+    answer:1,
+    feedback:"Take out a loan. In a meeting you might also hear: “We're taking out a loan at a fixed interest rate.”"
+  },
+  {
+    tag:"VOCABULARY", kind:"mc",
+    q:"“Os jovens não conseguem pagar uma casa sozinhos.” Which is the most natural?",
+    options:["Young people can't support a house alone.","Young people can't afford a house alone.","Young people can't sustain a house alone."],
+    answer:1,
+    feedback:"Afford. If you can afford something, you have the money for it. Support means giving help."
+  },
+  {
+    tag:"STRUCTURE", kind:"mc",
+    q:"“I heard it ___ this morning.”",
+    options:["in a news","on the news","on the new"],
+    answer:1,
+    feedback:"On the news. News is uncountable, so no “a”; and new (without s) is only the adjective, novo."
+  },
+  {
+    tag:"STRUCTURE", kind:"gap",
+    q:"Complete: Sorry, I didn't ___ the email you sent yesterday. (ver)",
+    accept:["see"],
+    feedback:"See. After didn't, the verb goes back to its base form: I didn't see, I didn't understand, how did it go?"
+  },
+  {
+    tag:"EXPRESSION", kind:"gap",
+    q:"Complete: When demand is higher than ___, prices go up. (oferta)",
+    accept:["supply"],
+    feedback:"Supply. Supply and demand is the fixed pair in economics. An offer is a proposta."
+  },
+  {
+    tag:"EXPRESSION", kind:"gap",
+    q:"Complete: Starting your own business means you have to ___ a few risks. (correr)",
+    accept:["take"],
+    feedback:"Take. We take a risk, and we take advantage of an opportunity."
+  }
+];
+</script>
+<!-- ============================================================= -->
+
+<style>
+  :root{
+    --red:#B91E29; --blush:#F2D7D7; --charcoal:#545454;
+    --grey:#D9D9D9; --offwhite:#F8F8F8;
+    --green:#2e7d52; --green-bg:#edf7f1; --wrong:#B91E29; --wrong-bg:#fdf0ef;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#eae6e6;
+    color:var(--charcoal);line-height:1.55}
+
+  .wrap{max-width:640px;margin:0 auto;min-height:100vh;background:#fff;
+    box-shadow:0 0 40px rgba(0,0,0,.08);display:flex;flex-direction:column}
+
+  /* ---------- Header ---------- */
+  header{background:var(--red);color:#fff;padding:26px 24px 22px}
+  header .kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.85;font-weight:600}
+  header h1{font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;
+    margin-top:6px;line-height:1.15}
+  header p{font-size:13px;opacity:.9;margin-top:7px}
+  .rule{height:6px;background:var(--blush)}
+
+  /* ---------- Tabs ---------- */
+  .tabs{display:flex;border-bottom:1px solid var(--grey);background:#fff;
+    position:sticky;top:0;z-index:5}
+  .tabs button{flex:1;font-family:inherit;font-size:14px;font-weight:600;letter-spacing:.02em;
+    color:#9a9a9a;background:none;border:none;border-bottom:3px solid transparent;
+    padding:15px 8px;cursor:pointer;transition:.15s}
+  .tabs button:hover{color:var(--charcoal)}
+  .tabs button[aria-selected="true"]{color:var(--red);border-bottom-color:var(--red)}
+
+  .panel{padding:24px;flex:1}
+  .panel[hidden]{display:none}
+
+  /* ---------- Vocabulary panel ---------- */
+  .intro{font-size:14px;margin-bottom:20px;color:#4a4a4a}
+  .section-head{background:var(--charcoal);color:#fff;font-weight:600;font-size:13px;
+    letter-spacing:.03em;padding:9px 13px;border-radius:3px;margin-bottom:12px}
+  .item{position:relative;background:var(--offwhite);border-radius:4px;
+    padding:13px 15px 13px 19px;margin-bottom:10px;overflow:hidden}
+  .item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--red)}
+  .item .top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .pill{display:inline-block;background:var(--blush);color:#7a1420;font-size:10px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .word{color:var(--red);font-weight:700;font-size:16px}
+  .def{font-size:13.5px;margin-top:6px;color:#3f3f3f}
+  .example{font-size:13px;font-style:italic;color:#7c7c7c;margin-top:4px}
+  .to-quiz{display:block;width:100%;margin-top:22px;font-family:inherit;font-size:15px;
+    font-weight:600;cursor:pointer;border:none;border-radius:8px;background:var(--red);
+    color:#fff;padding:14px 22px;transition:.15s}
+  .to-quiz:hover{filter:brightness(1.07)}
+  .notes-lines{display:none}
+
+  /* ---------- Quiz panel ---------- */
+  .progress{height:7px;background:#EADFDF;border-radius:4px;overflow:hidden;margin-bottom:20px}
+  .progress .fill{height:100%;width:0;background:var(--red);transition:width .3s ease}
+  .qcount{font-size:12px;color:#9a9a9a;font-weight:500;margin-bottom:12px}
+  .tag{display:inline-block;background:var(--blush);color:#7a1420;font-size:10px;font-weight:700;
+    letter-spacing:.09em;text-transform:uppercase;padding:4px 10px;border-radius:20px}
+  .q{font-size:18px;font-weight:600;color:#3a3a3a;margin:14px 0 18px;line-height:1.4}
+  .opts{display:flex;flex-direction:column;gap:10px}
+  .opt{text-align:left;font-size:15px;font-family:inherit;color:#444;background:var(--offwhite);
+    border:1.5px solid var(--grey);border-radius:8px;padding:13px 15px;cursor:pointer;transition:.15s}
+  .opt:hover:not(:disabled){border-color:var(--red);background:#fff}
+  .opt:disabled{cursor:default}
+  .opt.correct{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600}
+  .opt.wrong{border-color:var(--wrong);background:var(--wrong-bg);color:var(--wrong);font-weight:600}
+  .gap-row{display:flex;gap:10px}
+  .gap-row input{flex:1;min-width:0;font-size:16px;font-family:inherit;padding:13px 15px;
+    border:1.5px solid var(--grey);border-radius:8px;color:#444}
+  .gap-row input:focus{outline:none;border-color:var(--red)}
+  .gap-row button,.next,.retry{font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;
+    border:none;border-radius:8px;background:var(--red);color:#fff;padding:13px 22px;transition:.15s}
+  .gap-row button:hover,.next:hover,.retry:hover{filter:brightness(1.07)}
+  .feedback{margin-top:18px;padding:14px 16px;border-radius:8px;font-size:14px;display:none}
+  .feedback.show{display:block}
+  .feedback.ok{background:var(--green-bg);border-left:4px solid var(--green)}
+  .feedback.no{background:var(--wrong-bg);border-left:4px solid var(--wrong)}
+  .feedback .head{font-weight:700;margin-bottom:4px}
+  .feedback.ok .head{color:var(--green)}
+  .feedback.no .head{color:var(--wrong)}
+  .next{margin-top:18px;display:none}
+  .next.show{display:inline-block}
+  .results{text-align:center;padding:10px 0}
+  .results .score{font-family:'Playfair Display',serif;font-size:52px;color:var(--red);font-weight:700}
+  .results .msg{font-size:16px;margin:6px 0 22px;color:#4a4a4a}
+  .breakdown{text-align:left;margin:0 0 22px}
+  .breakdown .row{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:9px 0;
+    border-bottom:1px solid #eee}
+  .breakdown .mark{font-weight:700;flex:0 0 auto}
+  .breakdown .mark.ok{color:var(--green)} .breakdown .mark.no{color:var(--wrong)}
+
+  footer{border-top:1px solid var(--grey);text-align:center;font-size:11px;color:#a2a2a2;padding:16px 24px}
+
+  /* ---------- Print: the vocabulary panel only, as an A4 sheet ---------- */
+  @media print{
+    body{background:#fff}
+    .wrap{max-width:none;box-shadow:none;min-height:auto}
+    .tabs,.to-quiz,#panel-quiz{display:none !important}
+    #panel-vocab{display:block !important}
+    .notes-lines{display:block;margin-top:8px}
+    .notes-lines .line{border-bottom:1px solid var(--grey);height:26px}
+    @page{size:A4;margin:14mm}
+    /* Force the red header and blush rule to print even when the browser's
+       "Background graphics" option is unticked. Without this the header prints
+       white and the white brand text disappears. */
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">WorkSpeak Circle&trade;</div>
+      <h1 id="h-topic"></h1>
+      <p id="h-week"></p>
+    </header>
+    <div class="rule"></div>
+
+    <div class="tabs" role="tablist">
+      <button id="tab-vocab" role="tab" aria-controls="panel-vocab" aria-selected="true">Vocabulary</button>
+      <button id="tab-quiz"  role="tab" aria-controls="panel-quiz"  aria-selected="false">Quiz</button>
+    </div>
+
+    <section class="panel" id="panel-vocab" role="tabpanel" aria-labelledby="tab-vocab">
+      <p class="intro" id="intro"></p>
+      <div class="section-head">This week's language points</div>
+      <div id="items"></div>
+      <div class="section-head notes-lines" style="margin-top:16px">My notes</div>
+      <div class="notes-lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+        <div class="line"></div><div class="line"></div>
+      </div>
+      <button class="to-quiz" id="to-quiz">Now try the quiz →</button>
+    </section>
+
+    <section class="panel" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
+      <div class="progress"><div class="fill" id="fill"></div></div>
+      <div id="quiz-main"></div>
+    </section>
+
+    <footer>© <span id="year"></span> Elsa de Sousa Pinto · elsadesousapinto.com · WorkSpeak Circle. All rights reserved.</footer>
+  </div>
+
+<script>
+  var esc = function(s){var d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML;};
+  var norm = function(s){return (s||'').trim().toLowerCase().replace(/\s+/g,' ');};
+
+  /* ---------- Shared chrome ---------- */
+  document.getElementById('h-topic').textContent = META.topic;
+  document.getElementById('h-week').textContent = "Week of " + META.weekOf;
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.title = "WorkSpeak Circle — " + META.topic;
+
+  /* ---------- Vocabulary ---------- */
+  document.getElementById('intro').textContent =
+    "This sheet compiles the key language points from this week's WorkSpeak Circle sessions on "
+    + META.topic + ". Review these items before next week's session and try using them in your "
+    + "professional context.";
+  document.getElementById('items').innerHTML = ITEMS.map(function(it){
+    return '<div class="item"><div class="top">'
+      + '<span class="pill">' + esc(it.cat) + '</span>'
+      + '<span class="word">' + esc(it.word) + '</span></div>'
+      + '<div class="def">' + esc(it.def) + '</div>'
+      + '<div class="example">e.g. “' + esc(it.example) + '”</div></div>';
+  }).join('');
+
+  /* ---------- Tabs ---------- */
+  var tabs = {
+    vocab: {btn:document.getElementById('tab-vocab'), panel:document.getElementById('panel-vocab')},
+    quiz:  {btn:document.getElementById('tab-quiz'),  panel:document.getElementById('panel-quiz')}
+  };
+  function show(which){
+    Object.keys(tabs).forEach(function(k){
+      var t = tabs[k], on = (k === which);
+      t.btn.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.panel.hidden = !on;
+    });
+    if(location.hash.slice(1) !== which){
+      history.replaceState(null, '', '#' + which);
+    }
+    window.scrollTo(0, 0);
+  }
+  tabs.vocab.btn.addEventListener('click', function(){ show('vocab'); });
+  tabs.quiz.btn.addEventListener('click',  function(){ show('quiz'); });
+  document.getElementById('to-quiz').addEventListener('click', function(){ show('quiz'); });
+
+  /* ---------- Quiz ---------- */
+  var i = 0, score = 0, results = [];
+  var quizMain = document.getElementById('quiz-main'), fill = document.getElementById('fill');
+
+  function setProgress(){ fill.style.width = (i/QUESTIONS.length*100) + '%'; }
+
+  function render(){
+    setProgress();
+    if(i >= QUESTIONS.length){ return renderResults(); }
+    var qq = QUESTIONS[i];
+    var body = '<div class="qcount">Question ' + (i+1) + ' of ' + QUESTIONS.length + '</div>'
+      + '<span class="tag">' + esc(qq.tag) + '</span>'
+      + '<div class="q">' + esc(qq.q) + '</div>';
+    if(qq.kind === 'mc'){
+      body += '<div class="opts" id="opts">' + qq.options.map(function(o,idx){
+        return '<button class="opt" data-idx="'+idx+'">' + esc(o) + '</button>';
+      }).join('') + '</div>';
+    } else {
+      body += '<div class="gap-row"><input id="gap" type="text" autocomplete="off" '
+        + 'placeholder="Type your answer…"><button id="gapBtn">Check</button></div>';
+    }
+    body += '<div class="feedback" id="fb"></div>'
+      + '<button class="next" id="next">Next question →</button>';
+    quizMain.innerHTML = body;
+
+    if(qq.kind === 'mc'){
+      Array.prototype.forEach.call(quizMain.querySelectorAll('.opt'), function(b){
+        b.addEventListener('click', function(){ answerMC(parseInt(b.dataset.idx,10)); });
+      });
+    } else {
+      var input = document.getElementById('gap');
+      var go = function(){ answerGap(input.value); };
+      document.getElementById('gapBtn').addEventListener('click', go);
+      input.addEventListener('keydown', function(e){ if(e.key === 'Enter') go(); });
+    }
+  }
+
+  function correctText(qq){
+    return qq.kind === 'mc' ? qq.options[qq.answer] : qq.accept[0];
+  }
+
+  function lockAndFeedback(correct, qq){
+    var fb = document.getElementById('fb');
+    fb.className = 'feedback show ' + (correct ? 'ok' : 'no');
+    fb.innerHTML = '<div class="head">' + (correct ? '✓ Correct' : '✗ Not quite') + '</div>'
+      + (correct ? '' : '<div>Answer: <strong>' + esc(correctText(qq)) + '</strong></div>')
+      + '<div>' + esc(qq.feedback) + '</div>';
+    document.getElementById('next').classList.add('show');
+    results.push({q:qq.q, correct:correct});
+    if(correct) score++;
+  }
+
+  function answerMC(idx){
+    var qq = QUESTIONS[i];
+    var correct = idx === qq.answer;
+    Array.prototype.forEach.call(quizMain.querySelectorAll('.opt'), function(b,bi){
+      b.disabled = true;
+      if(bi === qq.answer) b.classList.add('correct');
+      if(bi === idx && !correct) b.classList.add('wrong');
+    });
+    lockAndFeedback(correct, qq);
+  }
+
+  function answerGap(val){
+    var qq = QUESTIONS[i];
+    var correct = qq.accept.some(function(a){ return norm(a) === norm(val); });
+    document.getElementById('gap').disabled = true;
+    document.getElementById('gapBtn').disabled = true;
+    lockAndFeedback(correct, qq);
+  }
+
+  function renderResults(){
+    fill.style.width = '100%';
+    var pct = Math.round(score/QUESTIONS.length*100);
+    var msg = pct >= 80 ? "Excellent — this vocabulary is becoming second nature. 🎯"
+            : pct >= 50 ? "Nice work — a quick review and you'll have these down. 💪"
+            : "Good start — revisit the vocabulary tab and try again. You've got this. 🌱";
+    var rows = results.map(function(r){
+      return '<div class="row"><span class="mark ' + (r.correct?'ok':'no') + '">'
+        + (r.correct?'✓':'✗') + '</span><span>' + esc(r.q) + '</span></div>';
+    }).join('');
+    quizMain.innerHTML = '<div class="results">'
+      + '<div class="score">' + score + '/' + QUESTIONS.length + '</div>'
+      + '<div class="msg">' + msg + '</div>'
+      + '<div class="breakdown">' + rows + '</div>'
+      + '<button class="retry" id="retry">Try again</button></div>';
+    document.getElementById('retry').addEventListener('click', function(){
+      i=0; score=0; results=[]; render();
+    });
+  }
+
+  quizMain.addEventListener('click', function(e){
+    if(e.target && e.target.id === 'next'){ i++; render(); }
+  });
+
+  render();
+  show(location.hash.slice(1) === 'quiz' ? 'quiz' : 'vocab');
+</script>
+</body>
+</html>
